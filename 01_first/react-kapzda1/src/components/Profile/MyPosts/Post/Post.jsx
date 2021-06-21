@@ -8,7 +8,7 @@ const Post = (props) => {
                 <img src='https://miro.medium.com/fit/c/1360/1360/1*x7X2oAehk5M9IvGwO_K0Pg.jpeg'/>
                     { props.message }
                     <div>
-                        <span>like {props.like}</span>
+                        <span>like</span>  {props.like}
                         </div>
 
             </div>
