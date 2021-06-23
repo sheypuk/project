@@ -5,7 +5,7 @@ const Post = (props) => {
     return (
 
                 <div className={s.item}>
-                <img src='https://miro.medium.com/fit/c/1360/1360/1*x7X2oAehk5M9IvGwO_K0Pg.jpeg'/>
+                <img src="/Photo/avatar.png"/>
                     { props.message }
                     <div>
                         <span>like</span>  {props.like}
