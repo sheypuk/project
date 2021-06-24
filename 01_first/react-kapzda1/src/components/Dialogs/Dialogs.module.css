@@ -5,10 +5,12 @@
 
 .dialogItems {
     padding: 10px;
+    text-decoration: none;
 }
 
 .dialogItems .active {
     color: gold;
+
 }
 
 .messages {
