@@ -6,24 +6,31 @@
 }
 
 .dialogItems {
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.dialogItems .active {
-    color: gold;
+    padding: 20px;
 
 }
+
 
 .messages {
-    padding: 10px;
+    padding: 20px;
+
+
+
 }
 
 .message {
+    color: #838daa;
+    text-decoration: none;
+
+
 
 }
 
 .dialog {
+    color: black;
     text-decoration: none;
+}
+
+.active {
+    color: #8224e3 ;
 }
