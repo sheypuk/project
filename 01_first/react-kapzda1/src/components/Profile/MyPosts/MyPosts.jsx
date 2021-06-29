@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
-import basePost from './../../BasePost'
+import base from '../../../index.js'
 
 const MyPosts = () => {
 
-    let posts = [
-        {id: 1, message: 'Hi, how are you', likeCount: 12},
-        {id: 2, message: 'it s my first', likeCount: 5},
-    ]
 
-    let postsElements = basePost.map (p => <Post message={p.message} likeCount={p.likeCount}/> )
+
+   let postsElements = (base.posts).map (p => <Post message={p.message} likeCount={p.likeCount}/> )
 
 
     return (
