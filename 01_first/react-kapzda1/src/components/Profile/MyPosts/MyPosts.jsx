@@ -3,11 +3,11 @@ import s from './MyPosts.module.css';
 import Post from "./Post/Post";
 import base from '../../../index.js'
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
 
 
-   let postsElements = (base.posts).map (p => <Post message={p.message} likeCount={p.likeCount}/> )
+   let postsElements = props.posts.map (p => <Post message={p.message} likeCount={p.likeCount}/> )
 
 
     return (
@@ -18,7 +18,7 @@ const MyPosts = () => {
                     <textarea></textarea>
                 </div>
                 <div>
-                    <button>Add post</button>
+                     <button>Add post</button>
                 </div>
             </div>
             <div className={s.posts}>
