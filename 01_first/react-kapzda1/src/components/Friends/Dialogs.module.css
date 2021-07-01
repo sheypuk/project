@@ -1,6 +1,7 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 1fr 1fr;
+
 
 
 }
@@ -36,6 +37,8 @@
 
 
 .dialog {
+    display: grid;
+    grid-template-columns: 3fr 10fr;
     vertical-align: baseline;
     color: black;
     text-decoration: none;
