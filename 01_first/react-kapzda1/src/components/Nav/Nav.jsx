@@ -24,7 +24,9 @@ const Nav = (props) => {
             </div>
             <div className={s.item}>
                 <NavLink to="/Friends" activeClassName={s.activeLink}>Friends</NavLink>
-                {/*<Friends  state={props.state}/>*/}
+            </div>
+            <div >
+                <Friends  state={props.state}/>
             </div>
         </nav>
     )

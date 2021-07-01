@@ -24,9 +24,16 @@ let state = {
             {id: 4, message: 'Yo'},
             {id: 5, message: 'wi'}
         ]
+    },
+
+    SideBar: {
+        dialogs: [
+            {id: 1, name: 'Dimych'},
+            {id: 2, name: 'Alena'},
+            {id: 3, name: 'Oleg'},
+
+        ],
+
     }
-
-
 }
-
 export default state;

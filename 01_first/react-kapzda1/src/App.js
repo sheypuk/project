@@ -12,10 +12,10 @@ import Music from "./components/Music/Music";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
+
         <div className='app-wrapper'>
             <Header/>
-            <Nav state={props.state.dialogsPage}/>
+            <Nav state={props.state.SideBar}/>
             <div className='app-wrapper-content'>
                 <Route path='/dialogs' render={ () => <Dialogs state={props.state.dialogsPage}  /> }/>
                 <Route path='/profile' render={ () => <Profile state={props.state.profilePage} /> }/>
@@ -26,7 +26,7 @@ const App = (props) => {
             </div>
 
         </div>
-        </BrowserRouter>)
+        )
 }
 
 
