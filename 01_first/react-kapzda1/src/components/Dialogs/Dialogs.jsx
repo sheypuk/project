@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
+import Post from "../Profile/MyPosts/Post/Post";
 
 
 const Dialogs = (props) => {
@@ -10,15 +11,22 @@ const Dialogs = (props) => {
     let dialogsElements = props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
 
 
-    let messagesElements =
-        props.state.messages.map(m => <Message message={m.message}/>);
+    let messagesElements = props.state.messages.map(m => <Message message={m.message}/>);
 
-    let newPostElement = React.createRef()
+    let newMessageElement = React.createRef();
 
-    let addPost = () => {
-        let text = newPostElement.current.value;
-        alert (text);
-    }
+    let addMessage = () => {
+        props.addMessage ();
+    };
+
+    let onMessageChange = () => {
+        let text= newMessageElement.current.value;
+        props.updateNewMessageText(text);
+
+    };
+
+
+
 
 
 
@@ -34,16 +42,24 @@ const Dialogs = (props) => {
 
             <div className={s.messages}>
                 <div>
-                    <div div className={s.message}>
-                        <textarea ref={newPostElement}></textarea>
+                    <div className={s.message}>
+                        <textarea
+                            onChange={onMessageChange}
+                            ref={newMessageElement}
+                            value={props.newMessageText}
+                        ></textarea>
                     </div>
                     <div>
-                        <button onClick={ addPost }>Add post</button>
+                        <button onClick={addMessage}>Add post</button>
                     </div>
+                    <div>
+                        {messagesElements}
                 </div>
+
             </div>
         </div>
-    )
+</div>
+)
 }
 
 export default Dialogs;
