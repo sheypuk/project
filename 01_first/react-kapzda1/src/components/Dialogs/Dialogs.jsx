@@ -3,6 +3,7 @@ import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
 import Post from "../Profile/MyPosts/Post/Post";
+import {addMessageActionCreator} from "../../redux/state";
 
 
 const Dialogs = (props) => {
@@ -16,7 +17,7 @@ const Dialogs = (props) => {
     let newMessageElement = React.createRef();
 
     let addMessage = () => {
-        props.dispatch ({type: 'addMessage'});
+        props.dispatch ({addMessageActionCreator});
     };
 
     let onMessageChange = () => {
