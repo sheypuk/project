@@ -109,7 +109,7 @@ let store = {
 
 
 export const addPostActionCreator = () => ({type: ADD_POST})
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE })
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE})
 
 
 /*export const addPostActionCreator = () => {           ТОже саме что сверхую
@@ -122,7 +122,8 @@ export const addMessageActionCreator = () => ({type: ADD_MESSAGE })
 export const upadateNewPostTextActionCreator = (text) =>
     ({type: UPDATE_NEW_POST_TEXT, newText: text})
 export const upadateNewMessageTextActionCreator = (text) =>
-    ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text})
+    ({type: UPDATE_NEW_MESSAGE_TEXT, newMessage: text})
 
 
 export default store;
+
