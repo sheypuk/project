@@ -32,7 +32,7 @@ let store = {
                 {id: 5, message: 'wi'}
             ],
 
-            newMessageText: 'itkamasutra1'
+            newMessageText: ''
         },
 
         SideBar: {
@@ -100,7 +100,7 @@ let store = {
 
             };
             this._state.dialogsPage.messages.push(newMessage);
-            this._state.profilePage.newMessageText = '';
+            this._state.dialogsPage.newMessageText = '';
             this._callSubscriber(this._state)
         }
 
