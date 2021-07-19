@@ -6,7 +6,7 @@ import {
     addPostActionCreator,
     upadateNewMessageTextActionCreator,
     upadateNewPostTextActionCreator
-} from "../../../redux/state";
+} from "../../../redux/profile-reducer";
 
 
 
