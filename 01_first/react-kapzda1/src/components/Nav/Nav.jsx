@@ -3,8 +3,9 @@ import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
 import Friends from "../Friends/Friends";
 import f from "../Friends/Dialogs.module.css"
+import StoreContext from "../../storeContex";
 
-const Nav = (props) => {
+const Nav = () => {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
@@ -25,9 +26,17 @@ const Nav = (props) => {
             <div className={s.item}>
                 <NavLink to="/Friends" activeClassName={s.activeLink}>Friends</NavLink>
             </div>
-            <div >
-                <Friends  state={props.state}/>
-            </div>
+            <StoreContext.Consumer>
+                {
+                    (store) => {
+                        let state = store.getState();
+                        <div>
+                            <Friends state={state.SideBar}/>
+                        </div>
+                    }
+                }
+                </StoreContext.Consumer>
+
         </nav>
     )
 }
