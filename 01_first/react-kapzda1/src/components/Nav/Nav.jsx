@@ -3,7 +3,7 @@ import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
 import Friends from "../Friends/Friends";
 import f from "../Friends/Dialogs.module.css"
-import StoreContext from "../../storeContex";
+
 
 const Nav = () => {
     return (
@@ -26,7 +26,7 @@ const Nav = () => {
             <div className={s.item}>
                 <NavLink to="/Friends" activeClassName={s.activeLink}>Friends</NavLink>
             </div>
-            <StoreContext.Consumer>
+           {/* <StoreContext.Consumer>
                 {
                     (store) => {
                         let state = store.getState();
@@ -35,7 +35,7 @@ const Nav = () => {
                         </div>
                     }
                 }
-                </StoreContext.Consumer>
+                </StoreContext.Consumer>*/}
 
         </nav>
     )
