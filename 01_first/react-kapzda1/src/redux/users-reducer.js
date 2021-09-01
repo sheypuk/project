@@ -1,44 +1,43 @@
 const FOLLOW = 'FOLLOW';
-const UNFOLLOW = 'UNFOLLOW';
+const UNFOLLOW= 'UNFOLLOW';
 const SET_USERS = 'SET_USERS'
+
 
 let initialstate = {
 
-    users: [
-
-
-    ],
+    users: []
 
 };
 
-const usersReducer = (state = initialstate, action) => {
+const usersReducer = (state= initialstate , action) => {
     switch (action.type) {
         case FOLLOW:
-            return {
+            return  {
                 ...state,
-                users: state.users.map(u => {
-                    if (u.id === action.userId) {
+                users: state.users.map( u=> {
+                    if (u.id ===action.userId){
                         return {...u, followed: true}
                     }
-                    return u
+                    return u;
                 })
             }
 
-        case UNFOLLOW:
 
-            return {
+        case UNFOLLOW:
+            return  {
                 ...state,
-                users: state.users.map(u => {
-                    if (u.id === action.userId) {
+                users: state.users.map( u=> {
+                    if (u.id ===action.userId){
                         return {...u, followed: false}
                     }
-                    return u
+                    return u;
                 })
             }
 
         case SET_USERS: {
-            return {...state, users: [...state.users, ...action.users]}
+        return {...state, users: [...state.users, ...action.users]}
         }
+
 
         default:
             return state;

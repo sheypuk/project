@@ -1,56 +1,56 @@
-import React from "react";
-import styles from './users.module.css'
+import React from  'react';
+import styles from './users.module.css';
 
 let Users = (props) => {
 
-    if ( props.users.length===0) {
 
 
+    if (props.users.length===0) {
         props.setUsers([
                 {
                     id: 1,
-                    photoUrl: 'https://sun9-39.userapi.com/c857620/v857620197/1280d6/6Q7uwq5poqg.jpg?ava=1',
+                    photoUrl: 'http://cdn.onlinewebfonts.com/svg/img_235552.png',
                     followed: false,
-                    fullname: 'Alena',
-                    status: 'kabachok',
-                    location: {city: 'Kaliningrad', country: 'Russia'}
+                    fullName: 'Dmitrit',
+                    status: 'Fly',
+                    location: {city: 'Minsk', country: 'Belarus'}
                 },
                 {
                     id: 2,
-                    photoUrl: 'https://sun9-39.userapi.com/c857620/v857620197/1280d6/6Q7uwq5poqg.jpg?ava=1',
+                    photoUrl: 'http://cdn.onlinewebfonts.com/svg/img_235552.png',
                     followed: false,
-                    fullname: 'Roman',
-                    status: 'god',
-                    location: {city: 'Moscow', country: 'Russia'}
+                    fullName: 'Roma',
+                    status: 'Fly',
+                    location: {city: 'kaliningrad', country: 'Russia'}
                 },
                 {
                     id: 3,
-                    photoUrl: 'https://sun9-39.userapi.com/c857620/v857620197/1280d6/6Q7uwq5poqg.jpg?ava=1',
+                    photoUrl: 'http://cdn.onlinewebfonts.com/svg/img_235552.png',
                     followed: true,
-                    fullname: 'Dmitriy',
-                    status: 'baran',
-                    location: {city: 'Minsk', country: 'Belarus'}
-                },
+                    fullName: 'Aleksandr',
+                    status: 'Fly',
+                    location: {city: 'Kiev', country: 'Ukraine'}
+                }
             ]
         )
     }
 
     return <div>
         {
-            props.users.map(u => <div key={u.id}>
+            props.users.map (u => <div key={u.id}>
                 <span>
                     <div>
-                        <img src={u.photoUrl} className={styles.userPhoto}/>
+                        <img src={u.photoUrl} className={styles.usersPhoto}/>
                     </div>
                     <div>
-                        {u.followed
-                            ? <button onClick={() => {props.unfollow(u.id)}}>Unfollow</button>
-                            : <button onClick={() => {props.follow(u.id)}}>Follow</button>}
+                        {u.followed ? <button onClick={()=> {props.unfollow (u.id)}}>Unfollow</button>
+                            : <button onClick={()=> {props.follow(u.id)}} >Follow</button>}
+
                     </div>
                 </span>
                 <span>
                     <span>
-                        <div>{u.fullname}</div>
+                        <div>{u.fullName}</div>
                         <div>{u.status}</div>
                     </span>
                     <span>
@@ -58,8 +58,9 @@ let Users = (props) => {
                         <div>{u.location.city}</div>
                     </span>
                 </span>
-            </div>)
+                </div>)
         }
     </div>
 }
-export default Users;
+
+export  default Users;
