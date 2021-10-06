@@ -10,7 +10,6 @@ import {
 } from "../../redux/users-reducer";
 import * as axios from "axios";
 import Users from "./Users";
-import preloader from './../../assets/images/loader.gif';
 import Preloader from "../Common/Preloader/Preloader";
 
 
