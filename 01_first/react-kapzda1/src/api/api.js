@@ -22,7 +22,7 @@ export const usersAPI = {
     }
 }
 
- export const
+
 
 
 export const getUsers2 =(currentPage = 1, pageSize = 10) => {
