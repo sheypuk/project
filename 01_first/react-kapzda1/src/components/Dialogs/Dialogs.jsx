@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
+import {Redirect} from "react-router-dom";
 
 
 
@@ -22,8 +23,9 @@ const Dialogs = (props) => {
         props.upadateNewMessageTextAction(text);
 
 
-    };
+    }
 
+    if (!props.isAuth) return <Redirect to={"/lohin"}/>;
 
 
     return (
