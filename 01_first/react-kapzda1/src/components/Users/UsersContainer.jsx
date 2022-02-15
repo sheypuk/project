@@ -9,6 +9,7 @@ import * as axios from "axios";
 import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
 import {usersAPI} from "../../api/api";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 
 class UsersContainer extends React.Component {
@@ -51,32 +52,11 @@ let mapStateToProps = (state) => {
     }
 }
 
-/*let mapDispatchToProps = (dispatch) => {
-    return {
-        follow: (userId) => {
-            dispatch(followAC(userId));
-        },
-        unfollow: (userId) => {
-            dispatch(unfollowAC(userId));
-        },
-        setUsers: (users) => {
-            dispatch(setUsersAC(users));
-        },
-        setCurrentPage: (pageNumber) => {
-            dispatch(setCurrentPageAC(pageNumber));
-        },
-        setTotalUsersCount: (totalCount) => {
-            dispatch(setUsersTotalCountAC(totalCount));
-        },
-        toggleIsFetching: (isFetching) => {
-            dispatch(toggleIsFetchingAC(isFetching));
-        }
-
-    }
-}*/
 
 
-export default connect(mapStateToProps, {
+
+
+export default withAuthRedirect (connect(mapStateToProps, {
     follow, unfollow,
     setCurrentPage,  toggleIsFollowingProgress, getUsers
-})(UsersContainer);
+})(UsersContainer));
